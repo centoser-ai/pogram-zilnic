@@ -1,0 +1,22 @@
+<main id="view" tabindex="-1"><div class="loading" id="loading">Se încarcă programul…</div></main>
+<nav class="tabbar" role="tablist" aria-label="Secțiuni">
+  <button type="button" role="tab" data-tab="azi" aria-selected="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="m8 12.2 2.7 2.7L16.2 9"/></svg>
+    <span>Azi</span>
+  </button>
+  <button type="button" role="tab" data-tab="saptamana" aria-selected="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M7.5 14h2M11 14h2M14.5 14h2M7.5 17h2"/></svg>
+    <span>Săptămâna</span>
+  </button>
+  <button type="button" role="tab" data-tab="statistici" aria-selected="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 16v-5M12 16V6M17 16v-8"/></svg>
+    <span>Statistici</span>
+  </button>
+  <button type="button" role="tab" data-tab="setari" aria-selected="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.2"/><circle cx="10" cy="17" r="2.2"/></svg>
+    <span>Setări</span>
+  </button>
+</nav>
+<div id="sheet-root"></div>
+<div id="toast-root" aria-live="polite"></div>
+<input type="file" id="importFile" accept=".json,application/json" data-change="importFile" hidden>
