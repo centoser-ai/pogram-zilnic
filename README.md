@@ -19,10 +19,9 @@ Funcționează fără internet după prima deschidere. Datele stau pe telefon (�
 
 Aplicația trebuie să stea pe o adresă `https://`. Variantele gratuite:
 
-### Varianta A: GitHub Pages (recomandat)
-Folderul `docs/` din acest repository e publicat de GitHub Pages la
-**https://centoser-ai.github.io/program-zilnic/**
-(Settings → Pages → Deploy from a branch → `main` / `docs`).
+### Varianta A: GitHub Pages (asta e folosită acum)
+Aplicația e publicată la **https://centoser-ai.github.io/pogram-zilnic/**.
+GitHub Pages servește ramura `gh-pages`, care e o copie a folderului `docs/`.
 
 ### Varianta B: Netlify Drop (dacă ai un calculator)
 1. Intră pe https://app.netlify.com/drop
@@ -40,4 +39,12 @@ Editezi fișierele din `src/`, apoi rulezi:
 python3 build.py
 ```
 
-Când publici o versiune nouă, crește `APP_VERSION` din `src/app.js`, ca telefonul să ia actualizarea.
+Când publici o versiune nouă, crește `APP_VERSION` din `src/app.js`, ca telefonul să ia actualizarea. Apoi:
+
+```bash
+git add -A && git commit -m "Descrierea schimbării"
+git push origin main
+git subtree push --prefix docs origin gh-pages
+```
+
+Ultima comandă actualizează site-ul. Aplicația de pe telefon ia versiunea nouă la următoarea deschidere cu internet.
